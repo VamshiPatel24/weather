@@ -5,7 +5,7 @@ const[city,setCity]=useState('')
 const[temp,setTemp]=useState(false)
 const[weather,setWeather]=useState([])
 useEffect(()=>{
-  const url='http://api.weatherapi.com/v1/forecast.json'
+  const url='https://api.weatherapi.com/v1/forecast.json'
   const api_key='5332a1e8a2ad4cd481243914252304'
   fetch(`${url}?key=${api_key}&q=hyderabad`)
   .then(response=>response.json())
@@ -15,7 +15,7 @@ useEffect(()=>{
   })
 },[])
 const searchWeather=()=>{
- const url='http://api.weatherapi.com/v1/forecast.json'
+ const url='https://api.weatherapi.com/v1/forecast.json'
 const api_key='5332a1e8a2ad4cd481243914252304'
 fetch(`${url}?key=${api_key}&q=${city}`)
 .then(response=>{
