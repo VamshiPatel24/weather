@@ -12,6 +12,7 @@ useEffect(()=>{
   .then(data=>{
       setWeather(data)
       setTemp(true)
+      setCity('')
   })
 },[])
 const searchWeather=()=>{
@@ -47,7 +48,7 @@ return(
            <h4>{weather.location.country}</h4>
          </div>
          <div className="child3">
-           
+           <h1>Sunrise: {weather.forecast.forecasrday[0].astro.sunrise}</h1>     
          </div>
         </>
         }
