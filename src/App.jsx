@@ -29,7 +29,9 @@ fetch(`${url}?key=${api_key}&q=${city}`)
       console.log(data)
       setWeather(data)
     setCity('')})
+     
   }}
+ 
  )
 }
 return(
@@ -48,7 +50,12 @@ return(
            <h4>{weather.location.country}</h4>
          </div>
          <div className="child3">
-           <h1>Sunrise: {weather.forecast.forecasrday[0].astro.sunrise}</h1>     
+           <h1>Humidity: {weather.current.humidity}</h1>
+           <h1>Sunrise: {weather.forecast.forecastday[0].astro.sunrise}</h1>   
+           <h1>Sunset: {weather.forecast.forecastday[0].astro.sunset}</h1>     
+           <h1>Min: {weather.forecast.forecastday[0].day.mintemp_c}°C</h1>   
+           <h1>Max: {weather.forecast.forecastday[0].day.maxtemp_c}°C</h1>   
+           <h1>Wind Speed: {weather.forecast.forecastday[0].day.maxwind_kph}km\h</h1>
          </div>
         </>
         }
