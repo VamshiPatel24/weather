@@ -55,7 +55,7 @@ return(
            <h1>Sunset: {weather.forecast.forecastday[0].astro.sunset}</h1>     
            <h1>Min: {weather.forecast.forecastday[0].day.mintemp_c}°C</h1>   
            <h1>Max: {weather.forecast.forecastday[0].day.maxtemp_c}°C</h1>   
-           <h1>Wind Speed: {weather.forecast.forecastday[0].day.maxwind_kph}km\h</h1>
+           <h1>Wind: {weather.forecast.forecastday[0].day.maxwind_kph}km\h</h1>
          </div>
         </>
         }
